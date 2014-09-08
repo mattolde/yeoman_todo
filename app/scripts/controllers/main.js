@@ -12,7 +12,9 @@ angular.module('mytodoApp')
     $scope.todos = ['Item 1','Item 2','Item 3'];
 
     $scope.addTodo = function(){
-      $scope.todos.push($scope.todo);
-      $scope.todo = '';
+      if($scope.todo.length > 0){
+        $scope.todos.push($scope.todo);
+        $scope.todo = '';
+      }
     };
   });
